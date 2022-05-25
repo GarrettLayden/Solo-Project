@@ -24,7 +24,7 @@ audioRecording.recordAudio = () =>
           const audioUrl = URL.createObjectURL(audioBlob);
           const audio = new Audio(audioUrl);
           const play = () => audio.play();
-          resolve({ audioBlob, audioUrl, play });
+          resolve({ audioBlob, audioUrl, play }); 
         });
 
         mediaRecorder.stop();
@@ -37,11 +37,10 @@ audioRecording.recordAudio = () =>
 audioRecording.sleep = time => new Promise(resolve => setTimeout(resolve, time));
 
 // start when button is pressed
-audioRecording.handleAction = async () => {
+audioRecording.handleAction = async (idNumber) => {
   const recorder = await audioRecording.recordAudio();
-  const actionButton = document.getElementById("action");
+  const actionButton = document.getElementById(`${idNumber}`);
   actionButton.disabled = true;
-  console.log('recorder: ', recorder);
   recorder.start();
   await audioRecording.sleep(1000);
   const audio = await recorder.stop();
@@ -49,5 +48,35 @@ audioRecording.handleAction = async () => {
   await audioRecording.sleep(1000);
   actionButton.disabled = false;
 };
+
+// audioRecording.storeAudio = async () => {
+//   let idNumber = 1;
+//   const recorder = await audioRecording.recordAudio();
+//   const actionButton = document.getElementById(`${idNumber}`);
+//   idNumber++;
+//   actionButton.disabled = true;
+//   console.log('recorder: ', recorder);
+//   recorder.start();
+//   await audioRecording.sleep(1000);
+//   await recorder.stop();
+//   // audio.play();
+//   await audioRecording.sleep(1000);
+//   actionButton.disabled = false;
+// }
+
+// audioRecording.playAudio = async () => {
+//   let idNumber = 1;
+//   const recorder = await audioRecording.recordAudio();
+//   const actionButton = document.getElementById(`${idNumber}`);
+//   idNumber++;
+//   actionButton.disabled = true;
+//   console.log('recorder: ', recorder);
+//   recorder.start();
+//   await audioRecording.sleep(1000);
+//   const audio = await recorder.stop();
+//   audio.play();
+//   await audioRecording.sleep(1000);
+//   actionButton.disabled = false;
+// }
 
 module.exports = audioRecording;
