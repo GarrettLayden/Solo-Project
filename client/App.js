@@ -15,16 +15,19 @@ const App = props => {
   //useCallback((e) => {
   //   console.log('it fucking works')
   // });
+  const square = [<Square />];
+
+  const addAudio = (e) => {
+    const newSquare = <Square />;
+    square.push(newSquare);
+  }
 
   return(
     <div>
-      <Square />
+      <button id="add" onClick={() => console.log(addAudio())}>Add recording</button>
+      {square}
     </div>
   )
 };
-
-// App.prototype.handleClick = useCallback((e) => {
-//   console.log('it fucking works')
-// });
 
 export default App;
