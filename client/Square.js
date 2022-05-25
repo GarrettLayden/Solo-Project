@@ -8,3 +8,7 @@ const Square = (props) => {
 }
 
 export default Square;
+
+// figure out how to add more squares everytime a button is pressed
+// figure out how to store audio by holding button
+// figure out how to play audio by clicking button
