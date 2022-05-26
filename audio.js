@@ -42,10 +42,10 @@ audioRecording.handleAction = async (idNumber) => {
   const actionButton = document.getElementById(`${idNumber}`);
   actionButton.disabled = true;
   recorder.start();
-  await audioRecording.sleep(3000);
+  await audioRecording.sleep(4000);
   const audio = await recorder.stop();
   audio.play();
-  await audioRecording.sleep(3000);
+  await audioRecording.sleep(4000);
   actionButton.disabled = false;
 };
 
