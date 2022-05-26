@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Prompt:wght@100&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Prompt:wght@100&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
 
 html {
   font-size: 1vw;
@@ -28,14 +29,17 @@ background-size: 62em;
 h1 {
   display: flex;
   justify-content: center;
-  color: #d83487;
+  color: rgb(255, 191, 0);
   font-weight: 600;
   font-size: 75px;
+  visibility: hidden;
 }
+
 
 h2 {
   display: flex;
   justify-content: center;
+  color: #5b3256;
 }
 
 div {
@@ -53,7 +57,7 @@ div {
   padding: 12px 24px 12px 24px;
   margin-top: 0px;
   background: rgb(251,63,177);
-  background: linear-gradient(165deg, rgba(251,63,177,1) 25%, rgba(216,52,135,1) 54%);
+  background: linear-gradient(165deg, rgb(220, 55, 154) 25%, rgb(185, 45, 115)54%);
   border-style: groove;
   /* border-width: 4px; */
   /* box-shadow: 5px 5px 2.5px 0px */
