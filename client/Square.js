@@ -4,7 +4,7 @@ const audioRecorder = require('../audio.js');
 
 const Square = (props) => {
 
-  return( <button className='Square' id={props.id} onMouseDown={() => {audioRecorder.storeAudio(props.id)}} onMouseUp={() => {audioRecorder.playAudio(props.id)}}>Start Recording</button>)
+  return( <button className='Square' id={props.id} onClick={() => {audioRecorder.handleAction(props.id)}}>Start Recording</button>)
   // onMouseDown={() => {audioRecorder.handleAction()}} 
 }
 

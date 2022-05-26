@@ -14,7 +14,9 @@ const SquareContainer = props => {
     <div className='bigBoard'>
       <div className='buttonsBox'>
           <button id='add' onClick={() => setSquareArray([...squareArray, <Square id={numOfSquares++} key={numOfSquares}/>])}>Add Recording</button>
+          <br></br>
           <button id='delete' onClick={() => setSquareArray([])}>Delete Recordings</button>
+          <br></br>
         <div className='board'>
           {squareArray}
         </div>

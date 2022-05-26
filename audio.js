@@ -42,10 +42,10 @@ audioRecording.handleAction = async (idNumber) => {
   const actionButton = document.getElementById(`${idNumber}`);
   actionButton.disabled = true;
   recorder.start();
-  await audioRecording.sleep(2000);
+  await audioRecording.sleep(3000);
   const audio = await recorder.stop();
   audio.play();
-  await audioRecording.sleep(2000);
+  await audioRecording.sleep(3000);
   actionButton.disabled = false;
 };
 
@@ -54,9 +54,9 @@ audioRecording.storeAudio = async (idNumber) => {
   const actionButton = document.getElementById(`${idNumber}`);
   // actionButton.disabled = true;
   recorder.start();
-  // await audioRecording.sleep(2000);
+  // await audioRecording.sleep(3000);
   return await recorder.stop();
-  // await audioRecording.sleep(2000);
+  // await audioRecording.sleep(3000);
   // actionButton.disabled = false;
 }
 
@@ -65,11 +65,11 @@ audioRecording.playAudio = async (idNumber) => {
   const actionButton = document.getElementById(`${idNumber}`);
   // actionButton.disabled = true;
   // recorder.start();
-  // await audioRecording.sleep(2000);
+  // await audioRecording.sleep(3000);
   // const audio = await recorder.stop();
   const audio = await audioRecording.storeAudio(idNumber);
   audio.play();
-  // await audioRecording.sleep(2000);
+  // await audioRecording.sleep(3000);
   // actionButton.disabled = false;
 }
 

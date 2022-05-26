@@ -5,7 +5,7 @@ import App from './App.js'
 
 render(
   <div>
-    <h2>Audio Boxes</h2>
+    <h2>Start Session</h2>
     <App />
   </div>,
   document.querySelector('#app')

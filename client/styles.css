@@ -1,74 +1,163 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Prompt:wght@100&display=swap');
 
 html {
-  font-size: 2vw;
+  font-size: 1vw;
+  font-family: 'Prompt', sans-serif;
 }
 
 header {
   display: flex;
   flex-direction: column;
-  justify-content: center
+  justify-content: center;
+
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #44318d;
+  /* background-color: #8860d0; */
+  background: rgb(136,96,208);
+background: linear-gradient(165deg, rgba(136,96,208,1) 25%, rgba(132,52,216,1) 54%);
+background: url('https://i.chzbgr.com/original/8821080320/h09DAA8C7/nintendo-pokemon-geodude-with-legs-weird') no-repeat fixed center;
+background-size: 62em;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  color: #d83487;
+  font-weight: 600;
+  font-size: 75px;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
 }
 
 div {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: column;
-  background-color: #d83487
 }
 
 #app {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
   background-color: #d83487;
   border: 1px solid transparent;
   border-radius: 8px;
   padding: 12px 24px 12px 24px;
-  margin: 2.5px;
-}
-
-#add {
-  font-family: 'Open Sans', sans-serif;
-  display: flex;
-  justify-content: center;
-  color: #379683;
-  border-radius: 8px;
-  background-color: #2a1b3d;
-}
-
-#delete {
-  font-family: 'Open Sans', sans-serif;
-  display: flex;
-  justify-content: center;
-  color: #1a73e8;
-  border-radius: 8px;
-  background-color: #2a1b3d;
+  margin-top: 0px;
+  background: rgb(251,63,177);
+  background: linear-gradient(165deg, rgba(251,63,177,1) 25%, rgba(216,52,135,1) 54%);
+  border-style: groove;
+  /* border-width: 4px; */
+  /* box-shadow: 5px 5px 2.5px 0px */
+  box-shadow: 1px 0px 9px #312468
 }
 
 .bigBoard {
   display: flex;
-  background-color: #606F78;
+  justify-content: center;
+  align-content: center;
+
+}
+
+.buttonsBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#add {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 2px #725f8a;
+  background:linear-gradient(to bottom, #2a1b3d 5%, #725f8a 100%);
+  background-color: #2a1b3d;
+  border-radius:8px;
+  border:1px solid #4e6096;
+  display:inline-block;
+  cursor:pointer;
+  color:#31bca0;
+  font-family: 'Open Sans', sans-serif;
+  font-size:19px;
+  padding:6px 38px;
+  text-decoration:none;
+  text-shadow:0px 0px 0px #283966;
+  width: 70%;
+}
+
+#add:hover {
+	background:linear-gradient(to bottom, #725f8a 5%, #2a1b3d 100%);
+	background-color:#725f8a;
+}
+
+#delete {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 2px #725f8a;
+  background:linear-gradient(to bottom, #2a1b3d 5%, #725f8a 100%);
+  background-color: #2a1b3d;
+  border-radius:8px;
+  border:1px solid #4e6096;
+  display:inline-block;
+  cursor:pointer;
+  color:rgb(244, 122, 122);
+  font-family: 'Open Sans', sans-serif;
+  font-size:19px;
+  padding:6px 38px;
+  text-decoration:none;
+  text-shadow:0px 0px 0px #283966;
+  width: 70%;
+}
+
+#delete:hover {
+	background:linear-gradient(to bottom, #725f8a 5%, #2a1b3d 100%);
+	background-color:#725f8a;
 }
 
 .Square {
-  font-family: 'Open Sans', sans-serif;
   display: flex;
   justify-content: center;
+  box-shadow: 0px 0px 0px 2px #725f8a;
+  background:linear-gradient(to bottom, #8e5dce 5%, #283966 100%);
   background-color: #8e5dce;
-  color: #fff;
-  border-radius: 8px;
+  border-radius:8px;
+  border:1px solid #4e6096;
+  display:inline-block;
+  cursor:pointer;
+  color: #e3eef0;
+  font-family: 'Open Sans', sans-serif;
+  font-size:19px;
+  padding:6px 38px;
+  text-decoration:none;
+  text-shadow:0px 0px 0px #283966;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.Square:hover {
+	background:linear-gradient(to bottom, #283966 5%, #8e5dce 100%);
+	background-color:#283966;
 }
 
 button:disabled {
-  background-color: rgb(132, 22, 22);
+  background:linear-gradient(to bottom, #e3eef0 5%, #bda9d8 100%);
+	background-color:#e3eef0;
+  color: #9c7ec3;
+  box-shadow: inset 2px 3px 0px 0px;
+  border: 2px solid #4e6096;
 }
