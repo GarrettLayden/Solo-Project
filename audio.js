@@ -24,7 +24,7 @@ audioRecording.recordAudio = () =>
           const audioUrl = URL.createObjectURL(audioBlob);
           const audio = new Audio(audioUrl);
           const play = () => audio.play();
-          resolve({ audioBlob, audioUrl, play }); 
+          resolve({audioBlob, audioUrl, play})
         });
 
         mediaRecorder.stop();
@@ -42,41 +42,35 @@ audioRecording.handleAction = async (idNumber) => {
   const actionButton = document.getElementById(`${idNumber}`);
   actionButton.disabled = true;
   recorder.start();
-  await audioRecording.sleep(1000);
+  await audioRecording.sleep(2000);
   const audio = await recorder.stop();
   audio.play();
-  await audioRecording.sleep(1000);
+  await audioRecording.sleep(2000);
   actionButton.disabled = false;
 };
 
-// audioRecording.storeAudio = async () => {
-//   let idNumber = 1;
-//   const recorder = await audioRecording.recordAudio();
-//   const actionButton = document.getElementById(`${idNumber}`);
-//   idNumber++;
-//   actionButton.disabled = true;
-//   console.log('recorder: ', recorder);
-//   recorder.start();
-//   await audioRecording.sleep(1000);
-//   await recorder.stop();
-//   // audio.play();
-//   await audioRecording.sleep(1000);
-//   actionButton.disabled = false;
-// }
+audioRecording.storeAudio = async (idNumber) => {
+  const recorder = await audioRecording.recordAudio();
+  const actionButton = document.getElementById(`${idNumber}`);
+  // actionButton.disabled = true;
+  recorder.start();
+  // await audioRecording.sleep(2000);
+  return await recorder.stop();
+  // await audioRecording.sleep(2000);
+  // actionButton.disabled = false;
+}
 
-// audioRecording.playAudio = async () => {
-//   let idNumber = 1;
-//   const recorder = await audioRecording.recordAudio();
-//   const actionButton = document.getElementById(`${idNumber}`);
-//   idNumber++;
-//   actionButton.disabled = true;
-//   console.log('recorder: ', recorder);
-//   recorder.start();
-//   await audioRecording.sleep(1000);
-//   const audio = await recorder.stop();
-//   audio.play();
-//   await audioRecording.sleep(1000);
-//   actionButton.disabled = false;
-// }
+audioRecording.playAudio = async (idNumber) => {
+  // const recorder = await audioRecording.recordAudio();
+  const actionButton = document.getElementById(`${idNumber}`);
+  // actionButton.disabled = true;
+  // recorder.start();
+  // await audioRecording.sleep(2000);
+  // const audio = await recorder.stop();
+  const audio = await audioRecording.storeAudio(idNumber);
+  audio.play();
+  // await audioRecording.sleep(2000);
+  // actionButton.disabled = false;
+}
 
 module.exports = audioRecording;

@@ -1,26 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
-/* 
+html {
+  font-size: 2vw;
+}
+
 header {
   display: flex;
-  /* flex-direction: column;
+  flex-direction: column;
   justify-content: center
-} */
+}
 
 body {
+  font-family: 'Open Sans', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: rgb(14, 214, 194);
+  background-color: #44318d;
 }
 
 div {
   display: flex;
-  flex-direction: column
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: #d83487
 }
 
-#action {
+#app {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #d83487;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 12px 24px 12px 24px;
+  margin: 2.5px;
+}
+
+#add {
+  font-family: 'Open Sans', sans-serif;
   display: flex;
   justify-content: center;
-  align-items: center;
+  color: #379683;
+  border-radius: 8px;
+  background-color: #2a1b3d;
+}
+
+#delete {
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  color: #1a73e8;
+  border-radius: 8px;
+  background-color: #2a1b3d;
+}
+
+.bigBoard {
+  display: flex;
+  background-color: #606F78;
+}
+
+.Square {
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  background-color: #8e5dce;
+  color: #fff;
+  border-radius: 8px;
+}
+
+button:disabled {
+  background-color: rgb(132, 22, 22);
 }
