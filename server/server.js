@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 });
 
 // 404 Error Handler for all other unknown end points
-app.use('*', (req, res) => res.status(404).send('Get the fuck off this page'))
+app.use('*', (req, res) => res.status(404).send('This page does not exist'))
 
 // Global Error Handler
 app.use((err, req, res, next) => {
